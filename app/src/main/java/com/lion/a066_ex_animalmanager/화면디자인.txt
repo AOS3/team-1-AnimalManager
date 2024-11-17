@@ -1,0 +1,219 @@
+[ activity_main.xml ]
+
+ConstraintLayout
+    - id : main
+
+    FragmentContainerView
+        - id : containerMain
+        - layout_width : 0dp
+        - layout_height : 0dp
+        - layout_constraintBottom_toBottomOf : parent
+        - layout_constraintEnd_toEndOf : parent
+        - layout_constraintStart_toStartOf : parent
+        - layout_constraintTop_toTopOf : parent
+
+[ row_main.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - padding : 10dp
+    - background : ?attr/selectableItemBackground
+
+    TextView
+        - id : textViewRowMainStudentName
+        - textAppearance : Large
+
+[ fragment_main.xml ]
+
+ConstraintLayout
+    - transitionGroup : true
+
+    MaterialToolbar
+        - layout_constraintEnd_toEndOf : parent
+        - layout_constraintStart_toStartOf : parent
+        - layout_constraintTop_toTopOf : parent
+        - background : @android:color/transparent
+        - id : toolbarMain
+
+    RecyclerView
+        - layout_width : 0dp
+        - layout_height : 0dp
+        - layout_constraintBottom_toBottomOf : parent
+        - layout_constraintEnd_toEndOf : parent
+        - layout_constraintStart_toStartOf : parent
+        - id : recyclerViewMain
+
+    FloatingActionButton
+        - layout_constraintBottom_toBottomOf : parent
+        - layout_constraintEnd_toEndOf : parent
+        - layout_marginEnd : 10dp
+        - layout_marginBottom : 10dp
+        - id : fabMainAdd
+        - src : @drawable/add_24px
+
+[ fragment_input.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarInput
+        - backgroud : @android:color/transparent
+
+    LinearLayout
+        - orientation : vertical
+        - padding : 10dp
+
+        TextView
+            - id : 삭제
+            - textAppearance : Large
+            - text : 운동부
+
+        MaterialButtonToggleGroup
+            - id : toggleGroupType
+            - layout_height : wrap_content
+            - layout_marginTop : 10dp
+            - singleSelection : true
+            - checkedButton : @id/buttonTypeBaseBall
+
+                Button
+                    - id : buttonTypeBaseBall
+                    - style : OutlinedButton
+                    - layout_weight : 1
+                    - text : 야구부
+
+                Button
+                    - id : buttonTypeBasketBall
+                    - style : OutlinedButton
+                    - layout_weight : 1
+                    - text : 농구부
+
+                Button
+                    - id : buttonTypeSoccer
+                    - style : OutlinedButton
+                    - layout_weight : 1
+                    - text : 축구부
+
+            TextInputLayout
+                - id : textFieldInputName
+                - layout_height : wrap_content
+                - startIconDrawable : ic_card_24px
+                - hint : 이름
+                - endIconMode : clear_text
+                - layout_marginTop : 10dp
+
+                    TextInputEditText
+                        - hint : 삭제
+                        - singleLine : true
+
+            TextInputLayout
+                - id : textFieldInputAge
+                - layout_height : wrap_content
+                - startIconDrawable : person_24px
+                - hint : 나이
+                - endIconMode : clear_text
+                - layout_marginTop : 10dp
+
+                    TextInputEditText
+                        - hint : 삭제
+                        - singleLine : true
+                        - inputType : number
+
+[ fragment_show.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarShow
+        - backgroud : @android:color/transparent
+
+        LinearLayout
+            - orientation : vertical
+            - padding : 10dp
+
+            TextView
+                - id : textViewShowType
+                - textAppearance : Large
+
+            TextView
+                - id : textViewShowName
+                - textAppearance : Large
+                - layout_marginTop : 10dp
+
+            TextView
+                - id : textViewShowAge
+                - textAppearance : Large
+                - layout_marginTop : 10dp
+
+[ fragment_modify.xml ]
+
+LinearLayout
+    - orientation : vertical
+    - transitionGroup : true
+
+    MaterialToolbar
+        - id : toolbarModify
+        - backgroud : @android:color/transparent
+
+        LinearLayout
+            - orientation : vertical
+            - padding : 10dp
+
+            TextView
+                - id : 삭제
+                - textAppearance : Large
+                - text : 운동부
+
+            MaterialButtonToggleGroup
+                - id : toggleGroupModifyType
+                - layout_height : wrap_content
+                - layout_marginTop : 10dp
+                - singleSelection : true
+                - checkedButton : @id/buttonTypeBaseBall
+
+                    Button
+                        - id : buttonModifyTypeBaseBall
+                        - style : OutlinedButton
+                        - layout_weight : 1
+                        - text : 야구부
+
+                    Button
+                        - id : buttonModifyTypeBasketBall
+                        - style : OutlinedButton
+                        - layout_weight : 1
+                        - text : 농구부
+
+                    Button
+                        - id : buttonModifyTypeSoccer
+                        - style : OutlinedButton
+                        - layout_weight : 1
+                        - text : 축구부
+
+                TextInputLayout
+                    - id : textFieldModifyName
+                    - layout_height : wrap_content
+                    - startIconDrawable : ic_card_24px
+                    - hint : 이름
+                    - endIconMode : clear_text
+                    - layout_marginTop : 10dp
+
+                        TextInputEditText
+                            - hint : 삭제
+                            - singleLine : true
+
+                TextInputLayout
+                    - id : textFieldModifyAge
+                    - layout_height : wrap_content
+                    - startIconDrawable : person_24px
+                    - hint : 나이
+                    - endIconMode : clear_text
+                    - layout_marginTop : 10dp
+
+                        TextInputEditText
+                            - hint : 삭제
+                            - singleLine : true
+                            - inputType : number
+
