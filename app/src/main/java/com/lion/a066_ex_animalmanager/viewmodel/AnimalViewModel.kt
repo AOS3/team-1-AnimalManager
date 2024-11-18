@@ -1,6 +1,5 @@
-package com.lion.a061ex_roomdatabase.viewmodel
+package com.lion.a066ex_animalmanager.viewmodel
 
-import AnimalFood
 import AnimalGender
 import AnimalType
 

@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.divider.MaterialDividerItemDecoration
-import com.lion.a061ex_roomdatabase.repository.AnimalRepository
-import com.lion.a061ex_roomdatabase.viewmodel.AnimalViewModel
+import com.lion.a066ex_animalmanager.repository.AnimalRepository
+import com.lion.a066ex_animalmanager.viewmodel.AnimalViewModel
 import com.lion.a066_ex_animalmanager.MainActivity
 import com.lion.a066_ex_animalmanager.databinding.FragmentMainBinding
 import com.lion.a066_ex_animalmanager.databinding.RowMainBinding
@@ -19,7 +19,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-
+// commit 24.11.18
 class MainFragment : Fragment() {
     lateinit var fragmentMainBinding: FragmentMainBinding
     lateinit var mainActivity: MainActivity

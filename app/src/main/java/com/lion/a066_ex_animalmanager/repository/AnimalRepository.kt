@@ -1,9 +1,9 @@
-package com.lion.a061ex_roomdatabase.repository
+package com.lion.a066ex_animalmanager.repository
 
 import AnimalGender
 import AnimalType
 import android.content.Context
-import com.lion.a061ex_roomdatabase.viewmodel.AnimalViewModel
+import com.lion.a066ex_animalmanager.viewmodel.AnimalViewModel
 import com.lion.team1_project.dao.AnimalDatabase
 import com.lion.team1_project.vo.AnimalVO
 
@@ -80,8 +80,8 @@ class AnimalRepository {
             val animalVo = animalDatabase?.animalDAO()?.selectAnimalDataByAnimalIdx(animalIdx)
             // 동물 객체에 담는다.
             val animalType = when (animalVo?.animalType) {
-                AnimalType.Animal_TYPE_DOG.number -> AnimalType.Animal_TYPE_CAT
-                AnimalType.Animal_TYPE_CAT.number -> AnimalType.Animal_TYPE_DOG
+                AnimalType.Animal_TYPE_DOG.number -> AnimalType.Animal_TYPE_DOG
+                AnimalType.Animal_TYPE_CAT.number -> AnimalType.Animal_TYPE_CAT
                 else -> AnimalType.Animal_TYPE_PARROT
             }
             val animalName = animalVo?.animalName
@@ -136,6 +136,16 @@ class AnimalRepository {
             // 삭제한다.
             animalDatabase?.animalDAO()?.deleteAnimalData(animalVO)
 
+        }
+
+
+        // 동물 한마리만 정보 삭제
+        fun deleteAnimalInfoByAnimalIdx(context: Context, animalIdx: Int){
+            val animalDatabase = AnimalDatabase.getInstance(context)
+            // 삭제할 동물 번호를 담고 있을 객체를 생성한다.
+            val animalVO = AnimalVO(animalIdx = animalIdx)
+            // 삭제한다
+            animalDatabase?.animalDAO()?.deleteAnimalData(animalVO)
         }
 
     }

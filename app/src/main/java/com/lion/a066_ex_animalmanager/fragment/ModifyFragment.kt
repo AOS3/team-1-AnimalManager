@@ -12,8 +12,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.lion.a061ex_roomdatabase.repository.AnimalRepository
-import com.lion.a061ex_roomdatabase.viewmodel.AnimalViewModel
+import com.lion.a066ex_animalmanager.repository.AnimalRepository
+import com.lion.a066ex_animalmanager.viewmodel.AnimalViewModel
 import com.lion.a066_ex_animalmanager.MainActivity
 import com.lion.a066_ex_animalmanager.R
 import com.lion.a066_ex_animalmanager.databinding.FragmentModifyBinding
@@ -21,7 +21,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-
+//
 // 동물 정보 수정 화면
 class ModifyFragment : Fragment() {
 

@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.lion.a061ex_roomdatabase.repository.AnimalRepository
-import com.lion.a061ex_roomdatabase.viewmodel.AnimalViewModel
+import com.lion.a066ex_animalmanager.repository.AnimalRepository
+import com.lion.a066ex_animalmanager.viewmodel.AnimalViewModel
 import com.lion.a066_ex_animalmanager.MainActivity
 import com.lion.a066_ex_animalmanager.R
 import com.lion.a066_ex_animalmanager.databinding.FragmentInputBinding
@@ -69,7 +69,7 @@ class InputFragment : Fragment() {
                         }
                         // 간식목록
                         var snackList = ""
-                            chipGroupSnacksInputFragment.checkedChipIds.forEach {
+                        chipGroupSnacksInputFragment.checkedChipIds.forEach {
                             when (it) {
                                 R.id.chipAppleInputFragment -> {
                                     snackList+=" ${AnimalFood.FOOD_APPLE.str}"
@@ -100,7 +100,7 @@ class InputFragment : Fragment() {
                         }
                     }
                 }
-                true
+                true // 인덱스만 잘못된것 같아요~
             }
 
         }
